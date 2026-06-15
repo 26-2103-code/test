@@ -1,4 +1,8 @@
 import streamlit as st
+import pandas as pd
+
+
+
 
 st.set_page_config(
   page_title="문화재 훼손"
@@ -6,6 +10,9 @@ st.set_page_config(
 
 st.title("문화재 훼손 예측")
 st.divider()
+
+df=pd.read_csv("data/yc_heritage_detail_enriched.csv")
+st.dataframe(df)
 
 !pip install pandas folium lxml scikit-learn seaborn koreanize-matplotlib -q
 
